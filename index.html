@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Request to Python Backend</title>
+</head>
+<body>
+    <h1>Send Request to Python Backend</h1>
+    
+    <form id="myForm">
+        <label for="inputData">Enter Data:</label>
+        <input type="text" id="inputData" name="inputData">
+        <button type="button" onclick="sendRequest()">Submit</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function sendRequest() {
+            const data = document.getElementById('inputData').value;
+
+            // Send a POST request to the Python backend using Fetch API
+            fetch('http://localhost:5500/process_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: data })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = data.result;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = 'Error occurred!';
+            });
+        }
+    </script>
+</body>
+</html>
