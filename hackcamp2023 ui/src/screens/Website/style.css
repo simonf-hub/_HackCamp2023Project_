@@ -1,0 +1,514 @@
+.website {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.website .div {
+  background-color: #ffffff;
+  height: 720px;
+  overflow: hidden;
+  position: relative;
+  width: 1280px;
+}
+
+.website .overlap {
+  height: 317px;
+  left: -13px;
+  position: absolute;
+  top: 11px;
+  width: 457px;
+}
+
+.website .group {
+  box-shadow: 0px 4px 4px #00000040;
+  height: 179px;
+  left: 0;
+  position: absolute;
+  top: 52px;
+  width: 177px;
+}
+
+.website .overlap-group {
+  height: 123px;
+  left: 42px;
+  position: relative;
+  top: 23px;
+  width: 115px;
+}
+
+.website .polygon {
+  height: 109px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  width: 103px;
+}
+
+.website .img {
+  height: 109px;
+  left: 12px;
+  position: absolute;
+  top: 0;
+  width: 103px;
+}
+
+.website .overlap-wrapper {
+  height: 138px;
+  left: 299px;
+  position: absolute;
+  top: 57px;
+  width: 138px;
+}
+
+.website .overlap-2 {
+  height: 138px;
+  position: relative;
+}
+
+.website .rectangle {
+  background-color: #d9d9d9;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 98px;
+  left: 21px;
+  position: absolute;
+  top: 24px;
+  transform: rotate(-25deg);
+  width: 98px;
+}
+
+.website .rectangle-2 {
+  background-color: #51fc77;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 98px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  transform: rotate(-42deg);
+  width: 98px;
+}
+
+.website .group-2 {
+  height: 136px;
+  left: 42px;
+  position: absolute;
+  top: 181px;
+  width: 415px;
+}
+
+.website .text-wrapper {
+  color: #000000;
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-style: var(--title-font-style);
+  font-weight: var(--title-font-weight);
+  left: 0;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  position: absolute;
+  top: 0;
+  width: 411px;
+}
+
+.website .p {
+  color: #000000;
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 2px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 64px;
+  width: 393px;
+}
+
+.website .overlap-group-wrapper {
+  height: 122px;
+  left: 158px;
+  position: absolute;
+  top: 0;
+  width: 122px;
+}
+
+.website .overlap-3 {
+  height: 122px;
+  position: relative;
+}
+
+.website .ellipse {
+  background-color: #d9d9d9;
+  border-radius: 57px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 114px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 114px;
+}
+
+.website .ellipse-2 {
+  background-color: #47a6ff;
+  border-radius: 57px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 114px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 114px;
+}
+
+.website .user-input-wrapper {
+  height: 471px;
+  left: 494px;
+  position: absolute;
+  top: 44px;
+  width: 292px;
+}
+
+.website .user-input {
+  height: 471px;
+}
+
+.website .input-window {
+  height: 471px;
+  width: 294px;
+}
+
+.website .overlap-4 {
+  background-color: var(--variable-collection-cream);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 471px;
+  position: relative;
+  width: 292px;
+}
+
+.website .underline {
+  height: 3px;
+  left: 21px;
+  position: absolute;
+  top: 61px;
+  width: 251px;
+}
+
+.website .text-wrapper-2 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 19px;
+  white-space: nowrap;
+}
+
+.website .input-text {
+  height: 357px;
+  left: 27px;
+  position: absolute;
+  top: 85px;
+  width: 239px;
+}
+
+.website .overlap-group-2 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  height: 357px;
+  position: relative;
+  width: 237px;
+}
+
+.website .text-wrapper-3 {
+  color: #000000;
+  font-family: var(--roboto-body-font-family);
+  font-size: var(--roboto-body-font-size);
+  font-style: var(--roboto-body-font-style);
+  font-weight: var(--roboto-body-font-weight);
+  left: 16px;
+  letter-spacing: var(--roboto-body-letter-spacing);
+  line-height: var(--roboto-body-line-height);
+  position: absolute;
+  top: 12px;
+  width: 208px;
+}
+
+.website .rectangle-3 {
+  background-color: #d9d9d9a6;
+  border-radius: 50px;
+  height: 157px;
+  left: 223px;
+  position: absolute;
+  top: 9px;
+  width: 5px;
+}
+
+.website .div-wrapper {
+  height: 616px;
+  left: 859px;
+  position: absolute;
+  top: 44px;
+  width: 362px;
+}
+
+.website .overlap-5 {
+  background-color: var(--variable-collection-cream);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 616px;
+  position: relative;
+  width: 354px;
+}
+
+.website .overlap-6 {
+  height: 414px;
+  left: 28px;
+  position: absolute;
+  top: 80px;
+  width: 276px;
+}
+
+.website .element-onions-large-wrapper {
+  height: 346px;
+  left: 0;
+  position: absolute;
+  top: 68px;
+  width: 270px;
+}
+
+.website .element-onions-large {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 0;
+  width: 268px;
+}
+
+.website .text-wrapper-4 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 0;
+  width: 178px;
+}
+
+.website .text-wrapper-5 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 37px;
+  width: 198px;
+}
+
+.website .text-wrapper-6 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 700;
+  left: 179px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.website .text-wrapper-7 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 18px;
+  white-space: nowrap;
+}
+
+.website .underline-2 {
+  height: 3px;
+  left: 28px;
+  position: absolute;
+  top: 58px;
+  width: 296px;
+}
+
+.website .group-3 {
+  height: 80px;
+  left: 88px;
+  position: absolute;
+  top: 507px;
+  width: 179px;
+}
+
+.website .overlap-group-3 {
+  background-color: #9aceff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 47px;
+  left: 0;
+  position: absolute;
+  top: 33px;
+  width: 175px;
+}
+
+.website .cached {
+  height: 24px !important;
+  left: 30px !important;
+  position: absolute !important;
+  top: 12px !important;
+  width: 24px !important;
+}
+
+.website .text-wrapper-8 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 42px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+  width: 121px;
+}
+
+.website .text-wrapper-9 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 51px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.website .rectangle-4 {
+  background-color: #d9d9d9a6;
+  border-radius: 50px;
+  height: 157px;
+  left: 319px;
+  position: absolute;
+  top: 79px;
+  width: 5px;
+}
+
+.website .group-4 {
+  height: 121px;
+  left: 523px;
+  position: absolute;
+  top: 543px;
+  width: 241px;
+}
+
+.website .group-5 {
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 73px;
+  width: 241px;
+}
+
+.website .overlap-group-4 {
+  height: 63px;
+  left: -17px;
+  position: relative;
+  top: -14px;
+  width: 260px;
+}
+
+.website .arrow {
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 260px;
+}
+
+.website .text-wrapper-10 {
+  color: #000000;
+  font-family: var(--roboto-body-font-family);
+  font-size: var(--roboto-body-font-size);
+  font-style: var(--roboto-body-font-style);
+  font-weight: var(--roboto-body-font-weight);
+  left: 82px;
+  letter-spacing: var(--roboto-body-letter-spacing);
+  line-height: var(--roboto-body-line-height);
+  position: absolute;
+  top: 23px;
+  width: 107px;
+}
+
+.website .overlap-7 {
+  background-color: #9aceff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 47px;
+  left: 20px;
+  position: absolute;
+  top: 0;
+  width: 175px;
+}
+
+.website .text-wrapper-11 {
+  color: #000000;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+  width: 125px;
+}
+
+.website .text-wrapper-12 {
+  color: #000000;
+  font-family: "Roboto", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 1135px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 690px;
+  white-space: nowrap;
+  width: 140px;
+}
