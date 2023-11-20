@@ -1,78 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Project</title>
-</head>
-<body>
-    <h1>ProjectName</h1>
-    
-    <form id="myForm">
-        <label for="inputData">Ask a question:</label>
-        <input type="text" id="inputData" name="inputData">
-        <button type="button" onclick="sendRequest()">Submit</button>
-    </form>
-    
-    <div id="result"></div>
+<html>
+  <head>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="website">
+      <div class="div">
+        <div class="overlap">
+          <div class="group">
+            <div class="overlap-group">
+              <img class="polygon" src="img/polygon-1.svg" /> <img class="img" src="img/polygon-2.svg" />
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <div class="rectangle-2"></div>
+            </div>
+          </div>
+          <div class="group-2">
+            <div class="text-wrapper">Recipe Maker</div>
+            <p class="p">The answer to the question, “What’s for dinner tonight?”</p>
+          </div>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-3">
+              <div class="ellipse"></div>
+              <div class="ellipse-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-input-wrapper">
+          <div class="user-input">
+            <div class="input-window">
+              <div class="overlap-4">
+                <img class="underline" src="img/underline-1.svg" />
+                <div class="text-wrapper-2"><label for="inputData">What’s in your fridge?</label></div>
+                <div class="input-text">
+                  
+                    <input type="text" id="inputData" name="inputData" class="overlap-group-2" class="text-wrapper-3">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-wrapper">
+          <!-- change here -->
+          <div class="container">
+            <div class="content">
+              <!-- Your content goes here -->
+               <div class="overlap-5" id="result" style="text-align: center;" class="input-text"></div>
+              <!-- Add more content as needed -->
+            </div>
+          </div>
+          
+         
+        </div>
+          
+        </div>
+        <div class="group-4">
+          <div class="group-5">
+            <div class="overlap-group-4">
+              <img class="arrow" src="img/arrow-1.svg" />
+              <div class="text-wrapper-10">Generating...</div>
+            </div>
+          </div>
+          <div > <button class="overlap-7" class="text-wrapper-11" type="button" onclick="sendRequest()">Make me a recipe!</button> </div>
+        </div>
+        <div class="text-wrapper-12">Designed for Hackcamp 2023.</div>
+      </div>
+    </div>
 
+
+
+    <!-- JS -->
     <script>
-        function checkStatus(runId) {
-            let url = "https://api-v2.agenthub.dev/plrun?run_id=" + runId;
-            const headers = {
-                "x-auth-key": "TRxEJum1hvhbfD0HITUXhdcSt8G3"
-            };
-    
-            console.log("Checking status at URL:", url); // Add this for debugging
-    
-            fetch(url, {
-                method: 'GET',
-                headers: headers,
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Response from checkStatus:", data); // Log the response
-                if (data.state !== 'DONE') {
-                    console.log('The process is not done yet');
-                    setTimeout(() => checkStatus(runId), 10000); // Use an arrow function to preserve the context
-                    document.getElementById('result').innerText = `${data.outputs.Recipe}`;
-                } else {
-                    console.log("The process is done");
-                    console.log("Recipe:", data.outputs.Recipe);
-                    document.getElementById('result').innerText = `${data.outputs.Recipe}`;
-                    console.log(data);
-                }
-            })
-            .catch((error) => {
-                console.error('Error in checkStatus:', error);
-                // Handle errors if needed
-            });
-        }
-    
-        function sendRequest() {
-            const data = document.getElementById('inputData').value;
-    
-            fetch('http://localhost:5000/process_data', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ input: data })
-            })
-            .then(response => {
-                console.log("Response from sendRequest:", response); // Log the response
-                return response.json();
-            })
-            .then(data => {
-                console.log("Data received from sendRequest:", data); // Log the data received
-                document.getElementById('result').innerText = data.result;
-                checkStatus(data.result); // Pass the response to the checkStatus function
-            })
-            .catch(error => {
-                console.error('Error in sendRequest:', error);
-                document.getElementById('result').innerText = 'Error occurred!';
-            });
-        }
-    </script>
-    
-</body>
+      function checkStatus(runId) {
+          let url = "https://api-v2.agenthub.dev/plrun?run_id=" + runId;
+          const headers = {
+              "x-auth-key": "TRxEJum1hvhbfD0HITUXhdcSt8G3"
+          };
+  
+          console.log("Checking status at URL:", url); // Add this for debugging
+  
+          fetch(url, {
+              method: 'GET',
+              headers: headers,
+          })
+          .then((response) => response.json())
+          .then((data) => {
+              console.log("Response from checkStatus:", data); // Log the response
+              if (data.state !== 'DONE') {
+                  console.log('The process is not done yet');
+                  setTimeout(() => checkStatus(runId), 10000); // Use an arrow function to preserve the context
+                  document.getElementById('result').innerText = `${data.outputs.Recipe}`;
+              } else {
+                  console.log("The process is done");
+                  console.log("Recipe:", data.outputs.Recipe);
+                  document.getElementById('result').innerText = `${data.outputs.Recipe}`;
+                  console.log(data);
+              }
+          })
+          .catch((error) => {
+              console.error('Error in checkStatus:', error);
+              // Handle errors if needed
+          });
+      }
+  
+      function sendRequest() {
+          const data = document.getElementById('inputData').value;
+  
+          fetch('http://localhost:5000/process_data', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ input: data })
+          })
+          .then(response => {
+              console.log("Response from sendRequest:", response); // Log the response
+              return response.json();
+          })
+          .then(data => {
+              console.log("Data received from sendRequest:", data); // Log the data received
+              document.getElementById('result').innerText = data.result;
+              checkStatus(data.result); // Pass the response to the checkStatus function
+          })
+          .catch(error => {
+              console.error('Error in sendRequest:', error);
+              document.getElementById('result').innerText = 'Error occurred!';
+          });
+      }
+  </script>
+  </body>
 </html>
