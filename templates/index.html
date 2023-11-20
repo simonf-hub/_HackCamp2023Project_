@@ -8,7 +8,7 @@
     <h1>ProjectName</h1>
     
     <form id="myForm">
-        <label for="inputData">Enter Data:</label>
+        <label for="inputData">Ask a question:</label>
         <input type="text" id="inputData" name="inputData">
         <button type="button" onclick="sendRequest()">Submit</button>
     </form>
@@ -16,6 +16,40 @@
     <div id="result"></div>
 
     <script>
+        function checkStatus(runId) {
+            console.log("THIS SI THE URL")
+            console.log(runId)
+            let url ="https://api-v2.agenthub.dev/plrun?run_id="
+            url = url + runId;
+            const headers = {
+                "x-auth-key": "TRxEJum1hvhbfD0HITUXhdcSt8G3"
+                };
+            fetch(url, {
+                method: 'GET',
+                headers: headers,
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                console.log(data);
+                if (data.state !== 'DONE') {
+                    console.log('ITS NOT DONE')
+                    console.log(data)
+                    // If status is not 'DONE', re-check after 5 seconds
+                    setTimeout(checkStatus, 5000);
+                    document.getElementById('result').innerHTML = `${data.outputs.RecipeInHTML}`
+                }
+                else{
+                    console.log("ITS DONE")
+                    console.log(data.outputs.RecipeInHTML)
+                    document.getElementById('result').innerHTML = `${data.outputs.RecipeInHTML}`;
+                    console.log(data)
+                }
+                })
+                .catch((error) => {
+                console.error('Error:', error);
+                // Handle errors if needed
+                });
+            }
         function sendRequest() {
             const data = document.getElementById('inputData').value;
 
@@ -27,9 +61,16 @@
                 },
                 body: JSON.stringify({ input: data })
             })
-            .then(response => response.json())
+            .then(response => {
+                console.log(response); // Logging the response from POST request
+                return response.json();
+            })
             .then(data => {
                 document.getElementById('result').innerHTML = data.result;
+                console.log("CHECKING STATUS");
+                console.log(data); // Logging the data received from POST request
+                checkStatus(data.result); // Pass the response to the checkStatus function
+
             })
             .catch(error => {
                 console.error('Error:', error);
